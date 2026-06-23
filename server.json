@@ -1,0 +1,24 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.erashev-fedor/gemsift-mcp",
+  "description": "AI resume triage for recruiters. Query your candidate pool from Claude or ChatGPT.",
+  "repository": {
+    "url": "https://github.com/erashev-fedor/gemsift-mcp",
+    "source": "github"
+  },
+  "version": "1.0.0",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://gemsift.com/api/mcp/mcp",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Bearer <your per-workspace key from gemsift.com -> Settings -> Connect AI>",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}
